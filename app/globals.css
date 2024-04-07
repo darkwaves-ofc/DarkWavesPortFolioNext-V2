@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+:root {
+  /* --font-primary: "Poppins", sans-serif; */
+  --main-hue: 208;
+  --primary: hsl(var(--main-hue), 92%, 54%);
+  --input: hsl(var(--main-hue), 50%, 50%, 6.5%);
+  --input-hover: hsl(var(--main-hue), 50%, 50%, 14%);
+  --primary-hover: hsl(var(--main-hue), 77%, 48%);
+  --light-color: hsl(var(--main-hue), 91%, 55%);
+  --color-dark: #343a40;
+  --color-white: #ffffff;
+  --color-light: #f8f9fa;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  /* font-family: var(--font-primary); */
+  /* color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: var(--color-dark-light);
+}
+input,
+textarea {
+  outline: none;
+  border: none;
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
