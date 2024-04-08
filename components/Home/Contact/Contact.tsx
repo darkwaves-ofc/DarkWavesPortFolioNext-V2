@@ -1,5 +1,3 @@
-"use client"
-
 import React from "react";
 import InputElement from "@/components/Home/common/InputElement";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

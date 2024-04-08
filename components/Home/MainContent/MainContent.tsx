@@ -1,10 +1,7 @@
-"use client";
 import React, { useState, useEffect } from "react";
 import { mainData } from "@/lib/data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
-import { Fade } from "react-awesome-reveal";
-import { cn } from "@/lib/utils";
 
 export default function MainContent() {
   return (
