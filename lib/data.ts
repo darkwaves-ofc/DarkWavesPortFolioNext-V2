@@ -26,10 +26,9 @@ export const footerLinks: { link: string; icon: IconDefinition }[] = [
 export const footerNavLinks: { path: string; title: string }[] = [
   { title: "About us", path: "#" },
   { title: "Our services", path: "#" },
-  { title: "Privacy policy", path: "#"  },
-  { title: "Hire Us", path: "#"  },
+  { title: "Privacy policy", path: "#" },
+  { title: "Hire Us", path: "#" },
 ];
-
 
 export const mainData = {
   siteLogo: "/Waves.png",
@@ -75,36 +74,64 @@ export const ProjectsData = [
   },
 ];
 
-export const SkillsData = [
+// Importing all images as modules
+import ReactPNG from "@/public/skills/React.png";
+import HTMLPNG from "@/public/skills/HTML.png";
+import CSSPNG from "@/public/skills/CSS.png";
+import JSPNG from "@/public/skills/JS.png";
+import NodeJsPNG from "@/public/skills/NodeJs.png";
+import ExpressPNG from "@/public/skills/Express.png";
+import MongoDBPNG from "@/public/skills/MongoDB.png";
+import ReactNativePNG from "@/public/skills/ReactNative.png";
+import ExpoPNG from "@/public/skills/Expo.png";
+import FigmaPNG from "@/public/skills/Figma.png";
+import IndesignPNG from "@/public/skills/Indesign.png";
+import { StaticImageData } from "next/image";
+
+// Define an interface for each skill item
+export interface SkillItem {
+  title: string;
+  logo: StaticImageData; // Assuming use of Next.js Image component with TypeScript
+}
+
+// Define an interface for each skill category
+export interface SkillCategory {
+  title: string;
+  content: SkillItem[];
+}
+
+// Define the type for the array holding all skill categories
+export type SkillsData = SkillCategory[];
+export const SkillsData: SkillsData = [
   {
-    title: "Web Delveloping",
+    title: "Web Developing",
     content: [
-      { title: "React", logo: "/skills/React.png" },
-      { title: "HTML", logo: "/skills/HTML.png" },
-      { title: "CSS", logo: "/skills/CSS.png" },
-      { title: "JS", logo: "/skills/JS.png" },
+      { title: "React", logo: ReactPNG },
+      { title: "HTML", logo: HTMLPNG },
+      { title: "CSS", logo: CSSPNG },
+      { title: "JS", logo: JSPNG },
     ],
   },
   {
-    title: "BackEnd Delveloping",
+    title: "BackEnd Developing",
     content: [
-      { title: "NodeJs", logo: "/skills/NodeJs.png" },
-      { title: "Express", logo: "/skills/Express.png" },
-      { title: "MongoDB", logo: "/skills/MongoDB.png" },
+      { title: "NodeJs", logo: NodeJsPNG },
+      { title: "Express", logo: ExpressPNG },
+      { title: "MongoDB", logo: MongoDBPNG },
     ],
   },
   {
-    title: "Mobile Delveloping",
+    title: "Mobile Developing",
     content: [
-      { title: "ReactNative", logo: "/skills/ReactNative.png" },
-      { title: "Expo", logo: "/skills/Expo.png" },
+      { title: "ReactNative", logo: ReactNativePNG },
+      { title: "Expo", logo: ExpoPNG },
     ],
   },
   {
     title: "UI designing",
     content: [
-      { title: "Figma", logo: "/skills/Figma.png" },
-      { title: "Indesign", logo: "/skills/Indesign.png" },
+      { title: "Figma", logo: FigmaPNG },
+      { title: "Indesign", logo: IndesignPNG },
     ],
   },
 ];

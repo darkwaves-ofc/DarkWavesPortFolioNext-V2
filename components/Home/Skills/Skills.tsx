@@ -1,9 +1,9 @@
-
-"use client"
+"use client";
 import React from "react";
 import { SkillsData } from "@/lib/data";
-import { Fade } from 'react-awesome-reveal';
+import { Fade } from "react-awesome-reveal";
 import Image from "next/image";
+import SkillCard from "./SkillCard";
 
 export default function Skills() {
   return (
@@ -18,31 +18,7 @@ export default function Skills() {
       <div className="w-full">
         {SkillsData.map((data, index) => (
           <Fade key={index} direction={index % 2 === 0 ? "left" : "right"}>
-            <div className="flex flex-col justify-between items-center my-4">
-              <div className="text-xl font-semibold my-4">
-                {data.title}
-              </div>
-              <div className="flex flex-row justify-evenly w-full">
-                {data.content.map((item, itemIndex) => (
-                  <Fade key={itemIndex} direction={itemIndex % 2 === 0 ? "right" : "left"}>
-                    <div className="flex flex-row items-center">
-                      <div className="flex-shrink-0">
-                        <Image
-                          width={50}
-                          height={50}
-                          src={item.logo}
-                          alt={item.title}
-                          className="object-cover"
-                        />
-                      </div>
-                      <div className="m-2 text-md font-semibold">
-                        {item.title}
-                      </div>
-                    </div>
-                  </Fade>
-                ))}
-              </div>
-            </div>
+            <SkillCard data={data}/>
           </Fade>
         ))}
       </div>
