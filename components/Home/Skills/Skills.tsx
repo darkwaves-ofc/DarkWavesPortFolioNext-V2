@@ -18,8 +18,8 @@ export default function Skills() {
       <div className="w-full">
         {SkillsData.map((data, index) => (
           <Fade key={index} direction={index % 2 === 0 ? "left" : "right"}>
-            <div className="flex flex-col justify-between my-4">
-              <div className="font-lg font-semibold my-4">
+            <div className="flex flex-col justify-between items-center my-4">
+              <div className="text-xl font-semibold my-4">
                 {data.title}
               </div>
               <div className="flex flex-row justify-evenly w-full">
