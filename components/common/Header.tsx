@@ -33,7 +33,6 @@ export default function Header() {
           aria-haspopup="true"
           aria-expanded={open ? "true" : undefined}
           onClick={handleClick}
-          // variant="text"
         >
           <FontAwesomeIcon
             className="md:hidden"
