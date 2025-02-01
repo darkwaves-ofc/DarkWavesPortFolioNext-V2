@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "DarkWaves",
-      url: "https://example.site.com",
+      url: "https://ceo.crysolabs.com",
     },
   ],
   generator: "Next.js",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
   openGraph: {
     type: "website",
-    url: "https://example.site.com",
+    url: "https://darkwaves-portfolio-v2.vercel.app",
     title: "Dark Waves - Begin of Smart",
     description:
       "Step into the future with Dark Waves, where coding meets innovation. Explore the portfolio of Vimukthi Indunil showcasing projects that redefine development with Next.js and React.",
