@@ -33,31 +33,31 @@ Coming soon! Subscribe to our channel to get notified when the tutorial is relea
 To get a local copy up and running, follow these steps:
 
 1. Clone the repository
-   \`\`\`
-   git clone https://github.com/your-username/modern-portfolio.git
-   \`\`\`
+   ```
+   git clone https://github.com/your-username/DarkWavesPortFolioNext-V2.git
+   ```
 
 2. Navigate to the project directory
-   \`\`\`
-   cd modern-portfolio
-   \`\`\`
+   ```
+   cd DarkWavesPortFolioNext-V2
+   ```
 
 3. Install dependencies
-   \`\`\`
+   ```
    npm install
-   \`\`\`
+   ```
 
 4. Run the development server
-   \`\`\`
+   ```
    npm run dev
-   \`\`\`
+   ```
 
 5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## 📂 Project Structure
 
-\`\`\`
-modern-portfolio/
+```
+DarkWavesPortFolioNext-V2/
 ├── components/
 │   ├── Contact.tsx
 │   └── Home/
@@ -72,19 +72,19 @@ modern-portfolio/
 ├── public/
 ├── README.md
 └── package.json
-\`\`\`
+```
 
 ## 🎨 Customization
 
 To customize the portfolio for your own use:
 
-1. Update the personal information in \`lib/data.ts\`
-2. Replace the placeholder images in the \`public\` directory with your own
-3. Modify the color scheme in \`tailwind.config.js\`
+1. Update the personal information in `lib/data.ts`
+2. Replace the placeholder images in the `public` directory with your own
+3. Modify the color scheme in `tailwind.config.js`
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check [issues page](https://github.com/darkwaves-ofc/modern-portfolio/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check [issues page](https://github.com/darkwaves-ofc/DarkWavesPortFolioNext-V2/issues).
 
 ## 📝 License
 
@@ -92,10 +92,18 @@ This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
 
 ## 👨‍💻 Author
 
-**Your Name**
+**Vimukthi Indunil**
 
-- GitHub: [@your-github-username](https://github.com/darkwaves-ofc)
-- LinkedIn: [@your-linkedin-username](https://linkedin.com/in/vimukthi-indunil)
+- GitHub: [@darkwaves-ofc](https://github.com/darkwaves-ofc)
+- LinkedIn: [@vimukthi-indunil](https://linkedin.com/in/vimukthi-indunil)
+
+## 🏢 Company
+
+This project is developed and maintained by **CrysoLabs**.
+
+- Website: [CrysoLabs](https://crysolabs.com/)
+- Email: [info@crysolabs.com](mailto:info@crysolabs.com)
+- Discord: [Join our community](https://discord.gg/wt3r4Z3u9S)
 
 ## 🙏 Acknowledgments
 
@@ -105,8 +113,7 @@ This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
 
 ## 💬 Contact
 
-If you have any questions or want to reach out, please open an issue or contact me directly at your.email@example.com.
+If you have any questions or want to reach out, please open an issue or contact me directly at [info@crysolabs.com](mailto:info@crysolabs.com).
 
 Happy coding! 🚀
-\`\`\`
 
