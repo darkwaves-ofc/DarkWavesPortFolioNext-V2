@@ -2,11 +2,14 @@
 
 This project is a modern, responsive portfolio website built with Next.js, React, and Tailwind CSS. It features a sleek design, smooth animations, and a user-friendly contact form.
 
-## 🎥 YouTube Tutorial
+## 📸 Preview
 
+![Portfolio Preview](https://github.com/darkwaves-ofc/DarkWavesPortFolioNext-V2/blob/ddc7ce3a71de53149ed5c6459d24906381787341/screenshots/image.png)
+
+<!-- ## 🎥 YouTube Tutorial
+Coming soon! Subscribe to our channel to get notified when the tutorial is released.
 [![Watch the tutorial](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
-
-Click the image above to watch the step-by-step tutorial on how to build this portfolio website from scratch!
+-->
 
 ## 🚀 Features
 
@@ -15,6 +18,7 @@ Click the image above to watch the step-by-step tutorial on how to build this po
 - Interactive contact form
 - Dynamic content loading
 - SEO optimized
+- Dark mode support
 
 ## 🛠 Technologies Used
 
@@ -80,7 +84,7 @@ To customize the portfolio for your own use:
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check [issues page](https://github.com/your-username/modern-portfolio/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check [issues page](https://github.com/darkwaves-ofc/modern-portfolio/issues).
 
 ## 📝 License
 
@@ -90,8 +94,8 @@ This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
 
 **Your Name**
 
-- GitHub: [@your-github-username](https://github.com/your-github-username)
-- LinkedIn: [@your-linkedin-username](https://linkedin.com/in/your-linkedin-username)
+- GitHub: [@your-github-username](https://github.com/darkwaves-ofc)
+- LinkedIn: [@your-linkedin-username](https://linkedin.com/in/vimukthi-indunil)
 
 ## 🙏 Acknowledgments
 
@@ -105,3 +109,4 @@ If you have any questions or want to reach out, please open an issue or contact 
 
 Happy coding! 🚀
 \`\`\`
+
