@@ -7,7 +7,7 @@ import { Fade } from "react-awesome-reveal";
 
 export default function AboutCard() {
   return (
-    <div className="main__about_content grid gap-5 mx-auto">
+    <div id="about" className="main__about_content grid gap-5 mx-auto">
       <Fade direction="left">
         <div className="relative">
           <Image

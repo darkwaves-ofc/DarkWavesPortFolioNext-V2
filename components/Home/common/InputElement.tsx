@@ -1,77 +1,49 @@
 "use client"
-import React, { useEffect } from "react";
+
+import type React from "react"
+import { useState } from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import type { IconDefinition } from "@fortawesome/fontawesome-svg-core"
 
 interface InputElementProps {
-  id: string;
-  value?: string;
-  handleInputChange?: (id: string, value: string) => void;
-  rows?: number;
-  name: string;
-  children: React.ReactNode;
+  id: string
+  name: string
+  icon: IconDefinition
+  rows?: number
 }
 
-export default function InputElement({
-  id,
-  value,
-  handleInputChange,
-  rows = 1,
-  name,
-  children,
-}: InputElementProps) {
-  useEffect(() => {
-    const element = document.querySelector<HTMLElement>(`#${id}-input-wrap`);
-    const inputElement = document.querySelector<HTMLInputElement>(
-      `#${id}-input-wrap-input`
-    );
-    if (element && value) element.classList.add("not-empty");
-    if (inputElement && !(document.activeElement === inputElement) && !value)
-      element?.classList.remove("not-empty");
-  }, [value, id]);
+export default function InputElement({ id, name, icon, rows = 1 }: InputElementProps) {
+  const [value, setValue] = useState("")
+  const [isFocused, setIsFocused] = useState(false)
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setValue(e.target.value)
+  }
+
+  const InputComponent = rows === 1 ? "input" : "textarea"
 
   return (
-    <div id={`${id}-input-wrap`} className="input-wrap grid grid-cols-2 gap-2 relative">
-      {rows === 1 ? (
-        <input
-          id={`${id}-input-wrap-input`}
-          type="text"
-          className="contact-input col-span-2 w-11/12 p-4 bg-input-bg border border-transparent rounded-lg outline-none transition-colors focus:bg-bg-color focus:border-light-main-color focus:ring-2 focus:ring-light-main-color relative"
-          value={value}
-          onChange={(e) => handleInputChange ? handleInputChange(id, e.target.value) : ""}
-          onFocus={(e) => {
-            const parent = e.target.parentNode as HTMLElement;
-            parent.classList.add("focus", "not-empty");
-          }}
-          onBlur={(e) => {
-            const parent = e.target.parentNode as HTMLElement;
-            parent.classList.remove("focus");
-            if (!value) parent.classList.remove("not-empty");
-          }}
-        />
-      ) : (
-        <textarea
-          id={`${id}-input-wrap`}
-          className="contact-input col-span-2 w-11/12 p-4 bg-input-bg border border-transparent rounded-lg outline-none resize-none transition-colors focus:bg-bg-color focus:border-light-main-color focus:ring-2 focus:ring-light-main-color relative"
-          rows={rows}
-          value={value}
-          onChange={(e) => handleInputChange ? handleInputChange(id, e.target.value) : ""}
-          onFocus={(e) => {
-            const parent = e.target.parentNode as HTMLElement;
-            parent.classList.add("focus", "not-empty");
-          }}
-          onBlur={(e) => {
-            const parent = e.target.parentNode as HTMLElement;
-            parent.classList.remove("focus");
-            if (!value) parent.classList.remove("not-empty");
-          }}
-        />
-      )}
-      <label
-        htmlFor={`${id}-input-wrap-input`}
-        className="col-start-1 col-span-2 absolute top-1/2 transform -translate-y-1/2 left-4 text-light-text-color pointer-events-none transition-transform"
-      >
-        {name}
-      </label>
-      {children}
+    <div className="relative">
+      <InputComponent
+        id={id}
+        name={id}
+        value={value}
+        onChange={handleInputChange}
+        onFocus={() => setIsFocused(true)}
+        onBlur={() => setIsFocused(false)}
+        className={`w-full bg-gray-100 border-2 rounded-lg py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-primary transition-colors duration-300 ${
+          isFocused || value ? "border-primary" : "border-gray-300"
+        }`}
+        placeholder={name}
+        rows={rows}
+      />
+      <FontAwesomeIcon
+        icon={icon}
+        className={`absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 ${
+          isFocused || value ? "text-primary" : ""
+        }`}
+      />
     </div>
-  );
+  )
 }
+

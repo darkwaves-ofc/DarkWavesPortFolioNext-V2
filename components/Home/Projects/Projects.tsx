@@ -7,15 +7,15 @@ import { Fade } from "react-awesome-reveal"; // Importing directly for SSR suppo
 
 export default function Projects() {
   return (
-    <div className="mt-8">
-      <div className="text-center mb-4 font-bold text-xl">
+    <div id="projects" className="mt-8">
+      <div className="text-center mb-4 font-bold text-2xl">
         Our Recent Projects
       </div>
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8 mt-3">
         {ProjectsData.map((data, index) => (
           <div
             key={index}
-            className={`mb-4 ${index % 2 === 0 ? "flex flex-row" : "flex flex-row-reverse"} justify-center`}
+            className={`mb-4 ${index % 2 === 0 ? "flex flex-row" : "flex flex-row-reverse"} justify-center gap-4`}
           >
             <Fade direction={index % 2 === 0 ? "right" : "left"} triggerOnce>
               <a href={data.url} target="_blank" className="block w-[26rem] h-[18rem] rounded-[1.5rem] overflow-hidden">
@@ -24,7 +24,7 @@ export default function Projects() {
                   width={500}
                   height={500}
                   alt=""
-                  className="transform scale-98 transition-transform duration-300 hover:scale-100 object-cover"
+                  className="transform scale-98 transition-transform duration-300 hover:scale-100 object-cover w-full h-full"
                 />
               </a>
             </Fade>
@@ -36,7 +36,7 @@ export default function Projects() {
                 <div className="font-medium">
                   {data.des}
                 </div>
-                <div className="flex flex-row justify-around">
+                <div className="flex flex-row justify-around mt-4">
                   {data.usage.map((usageData, usageIndex) => (
                     <div
                       className="font-semibold"

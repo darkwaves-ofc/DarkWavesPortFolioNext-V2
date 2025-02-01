@@ -11,16 +11,20 @@ import {
 
 export const navLinks: { title: string; path: string }[] = [
   { title: "Home", path: "/" },
-  { title: "About", path: "/about" },
-  { title: "Contact", path: "/contact" },
-  { title: "Projects", path: "/projects" },
+  { title: "About", path: "#about" },
+  { title: "Contact", path: "#contact" },
+  { title: "Projects", path: "#projects" },
 ];
 
-export const footerLinks: { link: string; icon: IconDefinition }[] = [
-  { link: "#", icon: faFacebookF },
-  { link: "#", icon: faTwitter },
-  { link: "#", icon: faInstagram },
-  { link: "#", icon: faLinkedinIn },
+export const footerLinks: {
+  link: string;
+  icon: IconDefinition;
+  name: string;
+}[] = [
+  { link: "#", icon: faFacebookF, name: "Facebook" },
+  { link: "#", icon: faTwitter, name: "Twitter" },
+  { link: "#", icon: faInstagram, name: "Instagram" },
+  { link: "#", icon: faLinkedinIn, name: "LinkedIn" },
 ];
 
 export const footerNavLinks: { path: string; title: string }[] = [

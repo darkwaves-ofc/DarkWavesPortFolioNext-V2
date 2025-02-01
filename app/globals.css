@@ -58,3 +58,13 @@ textarea {
     text-wrap: balance;
   }
 }
+
+
+@layer base {
+  * {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply scroll-smooth;
+  }
+}
